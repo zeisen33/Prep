@@ -11,7 +11,7 @@
 // Predict what the following JavaScript expressions will evaluate to. Open your command
 // line and use the **Node REPL** to check if you are correct.
 
-4 + 4 / 2
+console.log(4 + 4 / 2)
 (2 + -7) * 3
 101 % 10
 12 - 4 % 3
