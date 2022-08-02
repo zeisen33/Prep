@@ -11,38 +11,38 @@
 // Predict what the following JavaScript expressions will evaluate to. Open your command
 // line and use the **Node REPL** to check if you are correct.
 
-console.log(4 + 4 / 2)
-(2 + -7) * 3
-101 % 10
-12 - 4 % 3
-true && false
-true && !(false || false)
-!true && !(false || false)
-'cat' + 'dog'
-2 + 'pizza'
-2.5 * 'fish'
-5 >= 11
-5 === 5.0
-7 !== 7.1
-5 + 5 > 8
-6 + 6 !== 12
-2 > 1 || false
-'true' === true
-10 % 2 === 0
-21 % 2 === 0
-21 % 2 !== 0
-21 % 2 === 1
-12 % 3 === 0
-9 % 3 === 0
-14 % 3 === 0
-'new york'[0]
-'new york'[1]
-'san francisco'[2 * 3]
-'bootcamp'[3].toUpperCase()
-'bootcamp'.indexOf('T')
-'bootcamp'.indexOf('camp')
-'bootcamp'.indexOf('o') > -1
-'science'.indexOf('x') === -1
+// (4 + 4 / 2)     // 6
+// (2 + -7) * 3     // -15
+// 101 % 10       // 1
+// 12 - 4 % 3      // 11
+// true && false   // False
+// true && !(false || false)  //True
+// !true && !(false || false)  // False
+// 'cat' + 'dog' // 'catdog'
+// 2 + 'pizza' // '2pizza'
+// 2.5 * 'fish' // TypeError
+// 5 >= 11   // False
+// 5 === 5.0  //True
+// 7 !== 7.1  // True
+// 5 + 5 > 8  // True
+// 6 + 6 !== 12  // False
+// 2 > 1 || false  // True
+// 'true' === true  // True
+// 10 % 2 === 0  // True
+// 21 % 2 === 0  // False
+// 21 % 2 !== 0  // True
+// 21 % 2 === 1  // True
+// 12 % 3 === 0  // True
+// 9 % 3 === 0  // True
+// 14 % 3 === 0  // False
+// 'new york'[0]  // 'n'
+// 'new york'[1]  // 'e'
+// 'san francisco'[2 * 3]  // 'a'
+// 'bootcamp'[3].toUpperCase()  // 'T'
+// 'bootcamp'.indexOf('T')  // Null
+// 'bootcamp'.indexOf('camp') // 4
+// 'bootcamp'.indexOf('o') > -1 // 1
+// 'science'.indexOf('x') === -1  // True
 
 
 // ### Expression Evaluation Round 2
