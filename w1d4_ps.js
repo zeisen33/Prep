@@ -154,7 +154,63 @@ function myIndexOf(array, target) {
 
 function factorArray(array, number) {
     let newArr = []
-    for (let i = 0; i < array.length; i++) {
-        
+    let i = 0
+    // for (let i = 0; i < array.length; i++) {
+    //     if (number % array[i] === 0) {
+    //         newArr.push[array[i]]
+    // }
+    // }
+    while (i < array.length) {
+        if (number % array[i] === 0) {
+            newArr.push(array[i])
+        }
+    i++    
+    }
+    return newArr
+}
+
+// console.log( factorArray([2,3,4,5,6],35)) //=> [5]
+// console.log( factorArray([2,3,4,5,6],20)) // => [2,4,5]
+
+
+
+// function printForwards(arr) {
+//     for (var i = 0; i < arr.length; i++) {
+//       var ele = arr[i];
+//       console.log(ele);
+//     }
+//   }
+  
+//   var alphabet = ['a', 'b', 'c', 'd', 'e'];
+//   printForwards(alphabet);
+
+function printForwards(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        var ele = arr[i]
+        console.log(ele)
     }
 }
+// var alphabet = ['a', 'b', 'c', 'd', 'e'];
+// printForwards(alphabet)
+
+
+
+// function printBackwards(array) {
+//     for (var i = array.length - 1; i >= 0; i--) {
+//       var ele = array[i];
+//       console.log(ele);
+//     }
+//   }
+  
+//   var names = ['kurstie', 'mike', 'alex', 'meagan'];
+//   printBackwards(names);
+
+function printBackwards(array) {
+    for (var i = array.length - 1; i >= 0; i--) {
+        var ele = array[i]
+        console.log(ele)
+    }
+}
+
+// var names = ['kursie', 'mike', 'alex', 'meagan']
+// printBackwards(names)
