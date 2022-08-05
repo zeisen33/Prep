@@ -154,23 +154,25 @@ function myIndexOf(array, target) {
 
 function factorArray(array, number) {
     let newArr = []
-    let i = 0
-    // for (let i = 0; i < array.length; i++) {
-    //     if (number % array[i] === 0) {
-    //         newArr.push[array[i]]
-    // }
-    // }
-    while (i < array.length) {
+    for (let i = 0; i < array.length; i++) {
         if (number % array[i] === 0) {
             newArr.push(array[i])
         }
-    i++    
     }
     return newArr
+    // let newArr = []
+    // let i = 0
+    // while (i < array.length) {
+    //     if (number % array[i] === 0) {
+    //         newArr.push(array[i])
+    //     }
+    // i++    
+    // }
+    // return newArr
 }
 
-// console.log( factorArray([2,3,4,5,6],35)) //=> [5]
-// console.log( factorArray([2,3,4,5,6],20)) // => [2,4,5]
+console.log( factorArray([2,3,4,5,6],35)) //=> [5]
+console.log( factorArray([2,3,4,5,6],20)) // => [2,4,5]
 
 
 
