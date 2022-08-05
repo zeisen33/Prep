@@ -9,9 +9,13 @@
 */
 
 function oddRange(end) {
-  // your code here...
+  let newArr = []
+  for (i = 1; i <= end; i += 2) {
+    newArr.push(i)
+  }
+  return newArr
 }
-
+console.log(oddRange(22))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = oddRange;

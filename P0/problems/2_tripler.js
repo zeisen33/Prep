@@ -9,9 +9,13 @@
 */
 
 function tripler(array) {
-  // your code here...
+  let newArr = []
+  for (i = 0; i < array.length; i++) {
+    newArr.push(3 * array[i])
+  }
+  return newArr
 }
-
+// console.log(tripler([4, 1, 7]))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = tripler;

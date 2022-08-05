@@ -9,8 +9,9 @@
 */
 
 function average(num1, num2) {
-  // your code here...
+  return (num1 + num2)/2
 }
+// console.log(average(10, 20))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = average;
