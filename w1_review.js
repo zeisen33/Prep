@@ -185,4 +185,35 @@ function evenCaps(sentence) {
     newSen[1].toUpper()
     console.log(newSen)
 }
-(evenCaps("Tom got a small piece of pie"))
+// (evenCaps("Tom got a small piece of pie"))
+
+
+
+
+// reverseSentence my way
+
+// Write a function reverseSentence(sentence) that returns a string where all the
+// words in the input sentence are reversed. Don't use Array#reverse.
+
+// Examples:
+
+// reverseSentence("Go to the store") => "store the to Go"
+// reverseSentence("Jump, jump for joy") => "joy for jump Jump,"
+// *******************************************************************************/
+
+function reverseSentence(sentence) {
+    let j = sentence.length
+    let arr = []
+    for (i = j - 1; i >= 0; i--) {
+        if (sentence[i] === ' ') {
+            arr.push(sentence.substring(i + 1, j))
+            // console.log(i)
+            j = i
+        } else if (i === 0) {
+            arr.push(sentence.substring(i, j))
+        }
+    }
+    return arr.join(' ')
+}
+// console.log(reverseSentence("Go to the store"))
+// console.log(reverseSentence("Jump, jump for joy"))
