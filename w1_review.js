@@ -117,18 +117,36 @@ function everyOtherWord(sentence) {
 function wordYeller(sentence) {
     let arr = sentence.split(' ')
     let newArr = []
-    let punct = ['.', '!', '?', ';', ':']
+    let punct = ['.', ',', '!', '?', ';', ':']
     for (i = 0; i < arr.length; i++) {
-        // why doesn't this work: arr[i].concat("!")
-         if (arr[i[arr[i].length - 1]] === ("!")) {
-            console.log(arr[i])
-        // } else {newArr.push(arr[i].concat("!"))}
-    
+        if (punct.includes(arr[i][arr[i].length - 1])) {
+            newArr.push(arr[i])
+        // } else {newArr.concat(arr[i],["!"])}
+           } else {newArr.push(arr[i] + "!") }
     }
     return newArr.join(' ')
 }
-}
 // console.log(wordYeller("Stop it now! Please, wont you stop?"))
+
+// wordYeller using concat instead of push
+// the way to do what I'm trying to do actually is just to use push
+// was trying to add "!" to end of an array element. concat creates new array elements
+ function wordYeller2(sentence) {                          // this function intentionally won't work
+    let arr = sentence.split(' ')
+    let newArr = []
+    let punct = ['.', ',', '!', '?', ';', ':']
+    for (i = 0; i < arr.length; i++) {
+        if (punct.includes(arr[i][arr[i].length - 1])) {
+            newArr.push(arr[i])
+        } else {
+            newArr = newArr.concat(arr[i],["!"])
+        }  // this isn't happening
+        //{newArr.push(arr[i] + "!") }
+    }
+    return newArr.join(' ')
+ }
+ // console.log(wordYeller2("Stop it now! Please, wont you stop?"))
+ 
 
 // let sen = 'at boy. cat! dare ex;'
 // let arr = sen.split(' ')
@@ -177,15 +195,18 @@ function arraySubstring(words, str) {
 
 function evenCaps(sentence) {
     let newSen = sentence.split('')
-    // for (i = 0; i <= newSen.length - 1; i += 2) {
-    //     newSen[i].toUpper()
+    let finalSen = ''
+    for (i = 0; i <= newSen.length - 1; i += 2) {
+        //console.log(newSen[i].toUpperCase())
+        finalSen = finalSen + newSen[i].toUpperCase() + newSen[i + 1]
+    }
+        //console.log(finalSen)
+        // newSen[i].toUpperCase()
     // }
     // return sentence
-    console.log(typeof(newSen[1]))
-    newSen[1].toUpper()
-    console.log(newSen)
+    return finalSen  
 }
-// (evenCaps("Tom got a small piece of pie"))
+// console.log((evenCaps("Tom got a small piece of pie")))
 
 
 
@@ -217,3 +238,19 @@ function reverseSentence(sentence) {
 }
 // console.log(reverseSentence("Go to the store"))
 // console.log(reverseSentence("Jump, jump for joy"))
+
+
+
+
+// making variable number of arrays
+// Given a sentence, return sen.length arrays, where each array has one word of the sentence
+
+function createArray(sen) {
+    let starterArray = sen.split(' ')
+    let array = [] 
+    for (i = 0; i < starterArray.length; i++) {
+        array.push([starterArray[i]])
+    }
+    return array
+}
+console.log(createArray("The cow says 'Moo'"))
