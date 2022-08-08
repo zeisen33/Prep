@@ -12,12 +12,14 @@ reverseOddRange(9, 5) => []
 
 function reverseOddRange(start, end) {
   let newArr = []
-  for (i = end; e >= start; i -= 2) {
+  for (i = end; i >= start; i--) {
     if (i % 2 !== 0) {
       newArr.push(i)
-  }
+    }
+  }  
   return newArr
-}
+}  
+//console.log(reverseOddRange(3,7))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = reverseOddRange;

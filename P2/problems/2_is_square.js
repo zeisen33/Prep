@@ -16,8 +16,14 @@ isSquare(16) => true
 *******************************************************************************/
 
 function isSquare(number) {
-  // your code here...
+  for (i = 0; i <= number / 2; i++) {
+    if (i ** 2 === number) {
+      return true
+    }
+  }
+  return false
 }
+console.log(isSquare(9))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = isSquare;
