@@ -18,7 +18,7 @@ function magicNumbers(max) {
     }
   return newArr  
 }
-// console.log(magicNumbers(20))
+// console.log(magicNumbers(26))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = magicNumbers;

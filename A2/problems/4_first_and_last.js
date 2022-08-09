@@ -19,6 +19,20 @@ firstAndLast([12]); // => 0
 firstAndLast([7, 11, 3]); // => 4
 *******************************************************************************/
 
+function firstAndLast2(array) {
+  // if even or odd
+  let len = array.length
+  if (len % 2 === 0) {  //even
+    return array[0] + array[len - 1]
+  } else {              //odd
+    return array[0] - array[len - 1]
+  } 
+}
+console.log(firstAndLast2([1, 2, 3, 4, 5]))
+
+
+
+
 function firstAndLast(array) {
   if (array.length % 2 === 0) {
     return array[0] + array[array.length - 1]
