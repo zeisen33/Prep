@@ -19,7 +19,7 @@ printObject(bootcamp); // prints
 
 
 function printObject(obj) {
-    for (var key in obj) {
+    for (let key in obj) {
         console.log(`${key} - ${obj[key]}`)
     }
 }

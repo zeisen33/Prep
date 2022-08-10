@@ -30,17 +30,27 @@ countScores(peeps); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
 function countScores(people) {
-  let listOfNames = []                              // First, make a list of all the names
-  for (i = 0; i < people.length; i++) {
-    if (listOfNames.includes(people[i].name)) {
-      continue
+  let objOfNames = {}                              // First, make a list of all the names
+  for (let i = 0; i < people.length; i++) {
+    let name = people[i].name
+    let score = people[i].score
+     console.log(score)  
+    if (objOfNames[name] !== undefined) {
+      objOfNames[name] += score
     } else {
-      listOfNames.push(people[i].name)
+      objOfNames[name] = score
     }
     
-  }
 
-  return listOfNames
+    // if (listOfNames.includes(people[i].name)) {
+    //   continue
+    // } else {
+    //   listOfNames.push(people[i].name)
+    // }
+    
+  }
+ console.log(objOfNames)
+  return objOfNames
 }
 
 var peeps = [

@@ -48,8 +48,8 @@ firstNPrimes(4); // => [2, 3, 5, 7]
 function firstNPrimes(n) {
   let primes = []
   let elems = 0
-  for (i = 0; elems <= n; i++) {
-    if (isPrime(n)) {
+  for (let i = 0; elems < n; i++) {
+    if (isPrime(i)) {
       primes.push(i)
       elems += 1
     }
@@ -70,8 +70,13 @@ sumOfNPrimes(4); // => 17
 ***********************************************************************/
 
 function sumOfNPrimes(n) {
-
-}
+  sum = 0
+  for (let i = 0; i < firstNPrimes(n).length; i++) {
+      sum += firstNPrimes(n)[i]
+  }
+  return sum
+} 
+// console.log(sumOfNPrimes(0))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = {

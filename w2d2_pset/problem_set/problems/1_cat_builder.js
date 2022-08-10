@@ -12,13 +12,22 @@ cat2; // => { name: 'Nyan', color: 'rainbow', toys: [ 'poptarts' ] }
 ***********************************************************************/
 
 function catBuilder(name, color, toys) {
-    let cat = {}             // how would you do this with colon notation? keys will be identical to args, eg name : name
-    cat['name'] = name
-    cat['color'] = color
-    cat['toys'] = toys
+    let cat = {
+        name : name ,
+        color : color ,
+        toys : toys
+    // }                 // how would you do this with colon notation? keys will be identical to args, eg name : name
+    // cat['name'] = name
+    // cat['color'] = color
+    // cat['toys'] = toys
+    }
     return cat
+        // name : name ,
+        // color : color ,
+        // toys : toys ,
+    
 }
-// console.log(catBuilder('Whiskers', 'black', ['scratching-post', 'yarn']))
+ console.log(catBuilder('Whiskers', 'black', ['scratching-post', 'yarn']))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = catBuilder;
