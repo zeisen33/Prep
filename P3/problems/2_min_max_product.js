@@ -10,8 +10,18 @@ minMaxProduct([0, 1, -5, 3, 6]) => -30
 *******************************************************************************/
 
 function minMaxProduct(array){
-  // your code here...
+  let min = array[0]
+  let max = array[0]
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] < min) {
+      min = array[i]
+    } else if (array[i] > max) {
+      max = array[i]
+    }
+  }
+  return min * max
 }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = minMaxProduct;

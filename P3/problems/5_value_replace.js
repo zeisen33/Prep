@@ -13,8 +13,15 @@ valueReplace(['danny', 'kurstie', 'tommy'], {kurstie: 'operations', danny: 'plac
 *******************************************************************************/
 
 function valueReplace(array, obj){
-  // your code here...
+  for (let i = 0; i < array.length; i++) {
+    if (obj[array[i]] !== undefined) {
+      array[i] = obj[array[i]]
+    }  
+  }
+  return array
 }
+console.log(valueReplace(['a', 'b', 'c', 'd'], {a: 1, b: 2, d: 4}))
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = valueReplace;

@@ -14,7 +14,14 @@ phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello goodbye') => false
 *******************************************************************************/
 
 function phraseFinder(words, phrase){
-  // your code here...
+  for (i = 0; i < words.length; i ++) {
+    for (j = 0; j < words.length; j++) {
+      if (words[i] + ' ' + words[j] === phrase) {
+        return true
+      }
+    }
+  }
+  return false
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

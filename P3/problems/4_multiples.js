@@ -9,8 +9,15 @@ multiples(15, 3) => [ 3, 6, 9, 12 ]
 *******************************************************************************/
 
 function multiples(max, num){
-  // your code here...
+  let arr = []
+  for (let i = 2; i < max; i++) {
+    if (i % num === 0) {
+      arr.push(i)    
+    }
+  }
+  return arr
 }
+// console.log(multiples(10, 2))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = multiples;
