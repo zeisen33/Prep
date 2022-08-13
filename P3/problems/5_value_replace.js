@@ -20,7 +20,7 @@ function valueReplace(array, obj){
   }
   return array
 }
-console.log(valueReplace(['a', 'b', 'c', 'd'], {a: 1, b: 2, d: 4}))
+// console.log(valueReplace(['a', 'b', 'c', 'd'], {a: 1, b: 2, d: 4}))
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

@@ -39,18 +39,54 @@ titleize("shall we dance?", ["dance"])
 let punctuation = [";", "!", ".", "?", ",", "-"]
 
 function removePunctuation(string) {
-    for (let i = 0; i < punctuation.length; i++) {
-        let str = string.replace(punctuation[i],'')
-        console.log(str)
+    let arrOfString = string.split('')
+    let newArrOfString =[]
+    for (let i = 0; i < arrOfString.length; i++) {
+        if (punctuation.includes(arrOfString[i])) {
+            newArrOfString.push(' ')
+        } else {
+            newArrOfString.push(arrOfString[i])
+        }
     }
+    return newArrOfString.join('')
 }
-console.log(removePunctuation('jwe;frlk23.r.;lkajds;fj34'))
+    // let arrOfString = string.split('')
+    // for (let i = 0; i < arrOfString.length; i++) {
+    //     if (punctuation.includes(arrOfString[i])) {
+    //         arrOfString.pop(i)
+    //         i--
+    //     }
+    // }
+    // return arrOfString.join('')
+    // console.log(arrOfString)
 
+
+// console.log(removePunctuation('jwe;frlk23.r.;lkajds;fj34'))
+
+function isStopWord(word, stopWords) {
+    for (let i = 0; i < stopWords.length; i++)
+    if (stopWords[i].toLowerCase() === word.toLowerCase()) {
+        return true
+    }
+    return false
+}
+stopWords1 = ["love", "of"]
+word1 = "love"
+word2 = "hate"
+word3 = "of"
+// console.log(isStopWord(word3, stopWords1))
 
 
 function titleize(title, stopWords) {
-
+    let titleArray = title.split(' ')
+    console.log(titleArray)
+    let removedPunc = []
+    for (let i = 0; i < titleArray.length; i++) {
+        removedPunc.push(removePunctuation(titleArray[i]))
+    }
+    return removedPunc    
 }
+console.log(titleize("i LOVE; lover of mine", ["love", "of"]))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = titleize;
