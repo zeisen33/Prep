@@ -12,14 +12,14 @@ sillyCipher("bootcamp prep?", { o : "e", p : "q" , "?" : "!"}) //=> '.ee....q.q.
 sillyCipher("twmce", { m : "n", t : "d", w : "a"}) //=> 'dan..''
 *******************************************************************************/
 
-function sillyCipher(sentence, cipher){
+function sillyCipher(sentence, cipher){   
   let chars = sentence.split('')
-  let newChars = []
+  let newChars = []                             // can be done with a string too. newChars = ''
   for (let i = 0; i < chars.length; i++) {
     if (cipher[chars[i]] === undefined) {
-      newChars.push('.')
+      newChars.push('.')                        // newChars += '.'
     } else {
-      newChars.push(cipher[chars[i]])
+      newChars.push(cipher[chars[i]])           // newChars += cipher[chars[i]]      Adding to a string does not count as trying to mutate a string
     }
   }
   return newChars.join('')
