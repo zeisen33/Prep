@@ -12,7 +12,13 @@ commonFactors(45, 60); // => [ 1, 3, 5, 15 ]
 ***********************************************************************/
 
 function commonFactors(num1, num2) {
-
+    let arr = []
+    for (let n = 1; n <= Math.min(num1, num2); n++) {
+        if (num1 % n === 0 && num2 % n === 0) {
+            arr.push(n)
+        }
+    }
+    return arr
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

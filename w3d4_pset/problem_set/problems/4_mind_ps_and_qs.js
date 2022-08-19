@@ -20,7 +20,19 @@ mindPsAndQs('PPPXQPPPQ'); // => 5
 
 
 function mindPsAndQs(str) {
-
+    let longestCount = 0
+    let currentCount = 0
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === 'P' || str[i] === 'Q') {
+            currentCount++
+        } else {
+            currentCount = 0
+        }
+        if (currentCount > longestCount) {
+            longestCount = currentCount
+        }
+    }
+    return longestCount
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

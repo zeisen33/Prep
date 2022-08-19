@@ -18,6 +18,12 @@ function hasAllVowels(str) {
             vowels[str[i]]++
         }
     }
+    // for (let key in vowels) {
+    //     if (vowels[key] === 0) {
+    //         return false
+    //     }
+    // }
+    // return true
     // return for (let key in vowels) {                is there a way to loop in a return statement? would make line 23 easier 
     //     vowels[key] > 0 }
     return vowels.a > 0 && vowels.e > 0 && vowels.i > 0 && vowels.o > 0 && vowels.u > 0
