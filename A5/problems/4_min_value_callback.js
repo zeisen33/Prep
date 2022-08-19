@@ -19,17 +19,18 @@ minValueCallback(array2, double); // => 18
 *******************************************************************************/
 
 function minValueCallback(array, cb) {
-    console.log(array.isEmpty())
-  //   return cb(null)
-  // } else {
-  //   let min = array[0]
-  //   for (let i = 1; i < array.length; i++) {
-  //     if (array[i] < min) {
-  //       min = array[i]
-  //     }
-  //   }
-  //   return cb(min)
+  if (array.length === 0) {
+    return cb(null)
+  } else {
+    let min = array[0]
+    for (let i = 1; i < array.length; i++) {
+      if (array[i] < min) {
+        min = array[i]
+      }
+    }
+    return cb(min)
   }
+}
 
 
 // Math.abs is a built in function to get the absolute value of anumber
@@ -40,9 +41,13 @@ function double(n) {
   return n * 2
 }
 var array2 = [12, 9, 20, 13, 14];
-let array3 = ['fje']
+let array3 = []
 
-minValueCallback(array3, double)
+// console.log(minValueCallback(array3, double))
+
+// console.log([] === [])
+// console.log({} === {})
+// console.log('' === '')
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
