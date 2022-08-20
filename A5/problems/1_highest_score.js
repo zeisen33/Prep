@@ -17,28 +17,48 @@ highestScore(students); //=> 'TD2'
 *******************************************************************************/
 
 function highestScore(students) {
-  
   let maxScore = students[0].score
-  let pointer = 0
-  let firstNameLastName = ''
-  let id = students[0].id
+  let position = 0
   for (let i = 0; i < students.length; i++) {
-    if (students[i].score > maxScore) {
-      maxScore = students[i].score
-      pointer = i
-      id = students[i].id
+    let score = students[i].score
+    if (score > maxScore) {
+      maxScore = score
+      position = i
     }
     // console.log(maxScore)
-    // console.log(pointer)
-  // }
-  firstNameLastName = students[pointer].name.split(' ')
-   //console.log(firstNameLastName)
+    // console.log(position)
   }
-   let initialsID = firstNameLastName[0][0] + firstNameLastName[1][0] + id
+  let name = students[position].name
+  console.log(name)
+  let firstNameLastName = name.split(' ')
+  console.log(firstNameLastName)
+  let initials = firstNameLastName[0][0] + firstNameLastName[1][0]
+  console.log(initials)
+  let initialsID = initials + students[position].id
+  console.log(initialsID)
+}  
   
-   console.log(initialsID)
-  return initialsID
-}
+  // let maxScore = students[0].score
+  // let pointer = 0
+  // let firstNameLastName = ''
+  // let id = students[0].id
+  // for (let i = 0; i < students.length; i++) {
+  //   if (students[i].score > maxScore) {
+  //     maxScore = students[i].score
+  //     pointer = i
+  //     id = students[i].id
+  //   }
+  //   // console.log(maxScore)
+  //   // console.log(pointer)
+  // // }
+  // firstNameLastName = students[pointer].name.split(' ')
+  //  //console.log(firstNameLastName)
+  // }
+  //  let initialsID = firstNameLastName[0][0] + firstNameLastName[1][0] + id
+  
+  //  console.log(initialsID)
+  // return initialsID
+// }
 
 
 var students = [
@@ -48,7 +68,7 @@ var students = [
   {name: 'Fred Sladkey', id: 256, score: 94}
  ];
  
- highestScore(students); //=> 'TD2'
+ (highestScore(students)); //=> 'TD2'
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = highestScore;

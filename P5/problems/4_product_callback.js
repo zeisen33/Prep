@@ -10,7 +10,7 @@ productCallback(12, 3, Math.sqrt) // => 6
 *******************************************************************************/
 
 function productCallback(num1, num2, cb) {
-  // your code here...
+  return cb(num1 * num2)
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

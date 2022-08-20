@@ -22,7 +22,13 @@ reverse2D(arr2) => 'PatrickOscarMikeMattJulian'
 *******************************************************************************/
 
 function reverse2D(array) {
-  // your code here...
+  let newArr = []
+  for (let i = array.length - 1; i >= 0; i--) {
+    for (let j = array[i].length - 1; j >= 0; j--) {
+      newArr.push(array[i][j])
+    }
+  }
+  return newArr.join('')
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

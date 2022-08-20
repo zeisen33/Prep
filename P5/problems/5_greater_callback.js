@@ -10,7 +10,11 @@ greaterCallback(16.6, Math.floor, Math.ceil) => 17
 *******************************************************************************/
 
 function greaterCallback(num, cb1, cb2) {
-  // your code here...
+  if (cb1(num) > cb2(num)) {
+    return cb1(num)
+  } else {
+    return cb2(num)
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
