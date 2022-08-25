@@ -43,13 +43,15 @@ function smallestPrime(array) {
             primes.push(array[i])
         }
     }
-    for (let j = 0; j < primes.length - 1; j++) {
-        minSoFar = Math.min(primes[j], primes[j + 1])       // how would i do this with .Map
-    }
-    return minSoFar
+
+    // for (let j = 0; j < primes.length - 1; j++) {
+    //     minSoFar = Math.min(primes[j], primes[j + 1])       // commented also works
+    // }
+    // return minSoFar
+    return Math.min(...primes)                                 // ... is destructuring
 }
 var arr2 = [11, -7, 7, 8, 6, 10];
-console.log(smallestPrime(arr2)); // => 7
-
+// console.log(smallestPrime(arr2)); // => 7
+// console.log(Math.min(arr2))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = smallestPrime;
