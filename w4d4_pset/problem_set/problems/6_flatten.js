@@ -34,8 +34,14 @@ in your brain. (programmer.mind === 'blown')
 ***********************************************************************/
 
 function flatten(data) {
-
-}
+    if (!Array.isArray(data)) {             // base. If not an array, make it an array
+        return [data]
+    }
+    let newArr = []
+    for (let i = 0; i < data.length; i++) {
+    }
+    }
+console.log(flatten([0,4,'jfkl;da']))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = flatten;

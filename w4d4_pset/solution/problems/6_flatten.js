@@ -48,6 +48,9 @@ function flatten(data) {
 
   return flattened;
 }
+var array1 = [1, 2, [[3, 4], [5, [6]]], [7, 8]]
+flatten(array1); // => [ 1, 2, 3, 4, 5, 6, 7, 8 ]
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = flatten;

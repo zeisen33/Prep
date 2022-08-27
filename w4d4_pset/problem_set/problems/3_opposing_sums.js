@@ -19,7 +19,11 @@ opposingSums(arr2); // => [ 5, 5 ]
 ***********************************************************************/
 
 function opposingSums(array) {
-
+    let newArr = []
+    for (let [i, j] = [0, array.length - 1]; i < j; [i++, j--]) {
+        newArr.push(array[i] + array[j])
+    }
+    return newArr
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
