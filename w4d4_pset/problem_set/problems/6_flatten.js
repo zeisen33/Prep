@@ -34,14 +34,40 @@ in your brain. (programmer.mind === 'blown')
 ***********************************************************************/
 
 function flatten(data) {
-    if (!Array.isArray(data)) {             // base. If not an array, make it an array
+    let flattened = []
+    if (typeof(data) === 'string') {
         return [data]
     }
-    let newArr = []
     for (let i = 0; i < data.length; i++) {
+        if (Array.isArray(data[i])) {   
+            flattened = flattened.concat(flatten(data[i]))
+        }  else {
+            flattened.push(data[i])
+        }
     }
+    return flattened  
+}
+
+function flatten2(data) {
+    let flattened = []
+    if (typeof(data) === 'string') {
+        return [data]
     }
-console.log(flatten([0,4,'jfkl;da']))
+    let flattify = function(info) {
+        for (let i = 0; i < info.length; i++) {
+            if (Array.isArray(info[i])) {
+                flattify(info[i])
+            } else {
+                flattened.push(info[i])
+            }
+        }
+    }
+    flattify(data)    
+    return flattened
+}
+
+// console.log(flatten2([0,4,'jfkl;da']))
+// console.log([0, 1].concat(['the']))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = flatten;
