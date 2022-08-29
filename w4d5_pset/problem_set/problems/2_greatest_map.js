@@ -27,7 +27,11 @@ Hint:
 
 
 function greatestMap(array, cb1, cb2) {
-
+  let newArr = []
+  for (let i = 0; i < array.length; i++) {
+    newArr.push(Math.max(cb1(array[i], i, array), cb2(array[i], i, array)))
+  } 
+  return newArr
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

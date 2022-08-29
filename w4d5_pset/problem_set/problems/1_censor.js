@@ -21,19 +21,27 @@ function match(word, arr) {
                 newWord += word[i]
             }
         }
+    } else {
+        newWord += word
     }
+
     return newWord
 }
- console.log(match('Aarn',["aarn", "gun"]))
+ //console.log(match('Darn',["aarn", "gun"]))
 
 function censor(sentence, curseWords) {
+    let checkWords = curseWords
     let newSen = ''
     let words = sentence.split(' ')
+    //console.log(words)
+   // console.log(sentence)
+   // console.log(curseWords)
     for (let i = 0; i < words.length; i++) {
-        newSen += match(words[i], curseWords)
+        newSen += match(words[i], checkWords) + ' '
     }
-    return newSen
+    return newSen.trim()                // trim removes tailing whitespace. fixes ' ' after last letter
 }
+console.log(censor("Darn you Harold you son of a gun", ["darn", "gun"]))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = censor;
